@@ -47,8 +47,8 @@ export default defineNuxtConfig({
   // The brand looks most striking in dark, so that's the default; the toggle persists choice.
   colorMode: {
     classSuffix: '',
-    preference: 'dark',
-    fallback: 'dark',
+    preference: 'light',
+    fallback: 'light',
   },
 
   // Tailwind v4 via the official Vite plugin (no @nuxtjs/tailwindcss v3 module).
@@ -81,17 +81,17 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Zettamine — Next-Generation Boutique Technology & SaaS',
+      title: 'ZettaMine — Next-Generation Boutique Technology & SaaS',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'Zettamine is an innovation-driven boutique technology and SaaS company specialising in Industrial AI, cognitive ERP decoupling, frontier-tech R&D, high-fidelity data services, enterprise upskilling and strategic advisory.',
+            'ZettaMine is an innovation-driven boutique technology and SaaS company specialising in Industrial AI, cognitive ERP decoupling, frontier-tech R&D, high-fidelity data services, enterprise upskilling and strategic advisory.',
         },
         { name: 'theme-color', content: '#FB3B22' },
-        { property: 'og:title', content: 'Zettamine — The Innovation-Driven Enterprise' },
+        { property: 'og:title', content: 'ZettaMine — The Innovation-Driven Enterprise' },
         {
           property: 'og:description',
           content:

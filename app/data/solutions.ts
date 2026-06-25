@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Single source of truth for Zettamine's six solution pillars.
+// Single source of truth for ZettaMine's six solution pillars.
 // Authored from n_dh_docs/zetta/website/main.md and expanded for the site.
 // ---------------------------------------------------------------------------
 

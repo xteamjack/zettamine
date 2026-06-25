@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { story } from '~/data/site'
-useHead({ title: 'Our Story — Zettamine' })
+useHead({ title: 'Our Story — ZettaMine' })
 </script>
 
 <template>
@@ -8,7 +8,7 @@ useHead({ title: 'Our Story — Zettamine' })
     <PageHero
       eyebrow="Our story"
       title="Born from a contrarian bet."
-      intro="That the most valuable technology work is the work most firms avoid — niche, frontier and deeply innovative. Here is how that conviction became Zettamine."
+      intro="That the most valuable technology work is the work most firms avoid — niche, frontier and deeply innovative. Here is how that conviction became ZettaMine."
     />
 
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8">
@@ -30,7 +30,7 @@ useHead({ title: 'Our Story — Zettamine' })
             <p class="mt-3 font-display text-lg font-medium leading-snug">
               "If it already exists off the shelf, it isn't our problem to solve."
             </p>
-            <p class="mt-3 text-sm text-ink-500 dark:text-ink-400">— The Zettamine operating principle</p>
+            <p class="mt-3 text-sm text-ink-500 dark:text-ink-400">— The ZettaMine operating principle</p>
           </div>
         </div>
 

@@ -14,7 +14,7 @@ export const webServer = {
   //   zettamine.qa/crm   (local-dev + QA)
   //   zettamine.com/crm  (prod)
   // This intentionally REPLACES the digihire `talented.qa` cross-link — that
-  // host belongs to the digihire/guildtrek B2B side, not to Zettamine.
+  // host belongs to the digihire/guildtrek B2B side, not to ZettaMine.
   crmSlug: '/crm',
 
   allowedHosts: [

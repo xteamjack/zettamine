@@ -124,4 +124,6 @@ solutions index, detail pages and footer all read from it.
 
 The palette lives in `app/assets/css/main.css` under `@theme` (`--color-saffron-*`,
 `--color-ember-*`). Dark mode is class-based (`.dark` on `<html>`) and toggled via the
-header control; the brand defaults to dark for maximum impact.
+header control; the brand **defaults to light** and the toggle persists the user's choice.
+Surfaces are warm — the dark theme uses saffron/ember-tinted darks (`--bg`, `--bg-elevated`),
+never pure black.

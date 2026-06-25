@@ -12,7 +12,7 @@ if (!solution.value) {
 const others = computed(() => solutions.filter((s) => s.slug !== slug.value))
 
 useHead(() => ({
-  title: `${solution.value?.menuTitle} — Zettamine`,
+  title: `${solution.value?.menuTitle} — ZettaMine`,
   meta: [{ name: 'description', content: solution.value?.pitch }],
 }))
 </script>

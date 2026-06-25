@@ -23,7 +23,7 @@ export const legalDocs: Record<string, LegalDoc> = {
     eyebrow: 'Legal',
     updated,
     intro:
-      'Zettamine respects your privacy. This policy explains what information we collect, how we use it, and the choices you have. It applies to zettamine.com and our related services.',
+      'ZettaMine respects your privacy. This policy explains what information we collect, how we use it, and the choices you have. It applies to zettamine.com and our related services.',
     sections: [
       {
         heading: 'Information we collect',
@@ -71,7 +71,7 @@ export const legalDocs: Record<string, LegalDoc> = {
     eyebrow: 'Legal',
     updated,
     intro:
-      'These terms govern your use of the Zettamine website. By accessing the site you agree to them. Engagement-specific services are governed by separate written agreements.',
+      'These terms govern your use of the ZettaMine website. By accessing the site you agree to them. Engagement-specific services are governed by separate written agreements.',
     sections: [
       {
         heading: 'Use of the site',
@@ -82,7 +82,7 @@ export const legalDocs: Record<string, LegalDoc> = {
       {
         heading: 'Intellectual property',
         body: [
-          'All content on this site — including text, graphics, logos and code — is owned by Zettamine or its licensors and is protected by applicable intellectual property laws. The Zettamine name and mark may not be used without written permission.',
+          'All content on this site — including text, graphics, logos and code — is owned by ZettaMine or its licensors and is protected by applicable intellectual property laws. The ZettaMine name and mark may not be used without written permission.',
         ],
       },
       {
@@ -94,7 +94,7 @@ export const legalDocs: Record<string, LegalDoc> = {
       {
         heading: 'Limitation of liability',
         body: [
-          'To the maximum extent permitted by law, Zettamine is not liable for any indirect or consequential loss arising from use of this website.',
+          'To the maximum extent permitted by law, ZettaMine is not liable for any indirect or consequential loss arising from use of this website.',
         ],
       },
       {
@@ -112,7 +112,7 @@ export const legalDocs: Record<string, LegalDoc> = {
     eyebrow: 'Legal',
     updated,
     intro:
-      'This policy explains how Zettamine uses cookies and similar technologies on zettamine.com. We keep our use of cookies minimal and purposeful.',
+      'This policy explains how ZettaMine uses cookies and similar technologies on zettamine.com. We keep our use of cookies minimal and purposeful.',
     sections: [
       {
         heading: 'What cookies we use',

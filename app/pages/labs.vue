@@ -2,7 +2,7 @@
 import { solutionBySlug } from '~/data/solutions'
 
 const labs = solutionBySlug('frontier-tech-labs')!
-useHead({ title: 'Frontier Tech Labs — Zettamine' })
+useHead({ title: 'Frontier Tech Labs — ZettaMine' })
 
 const principles = [
   { icon: 'lucide:rocket', title: 'Research to runtime', body: 'We only explore what we can eventually ship. Every experiment is shaped like production.' },
@@ -14,7 +14,7 @@ const principles = [
 <template>
   <div>
     <!-- immersive dark hero -->
-    <section class="relative overflow-hidden border-b border-hairline bg-ink-950 text-white">
+    <section class="relative overflow-hidden border-b border-hairline bg-[#1c1009] text-white">
       <div class="absolute inset-0 opacity-90" style="background: radial-gradient(80% 100% at 80% 0%, rgba(255,174,38,0.22), transparent 55%), radial-gradient(80% 100% at 0% 100%, rgba(251,59,34,0.28), transparent 55%)" />
       <div class="absolute inset-0 bg-grid opacity-30" />
       <div class="pointer-events-none absolute inset-0 opacity-60">

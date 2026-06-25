@@ -5,7 +5,7 @@ import { stats, differentiators, approachSteps, industries, company } from '~/da
 const marqueeItems = solutions.flatMap((s) => s.topics.map((t) => t.title))
 
 useHead({
-  title: 'Zettamine — Niche, High-Value, Deeply Innovative Technology',
+  title: 'ZettaMine — Niche, High-Value, Deeply Innovative Technology',
 })
 </script>
 
@@ -34,7 +34,7 @@ useHead({
           </h1>
 
           <p v-reveal="{ delay: 130 }" class="mt-6 max-w-xl text-lg leading-relaxed text-ink-600 dark:text-ink-200 sm:text-xl">
-            Zettamine is a boutique technology &amp; SaaS company engineering niche, high-value
+            ZettaMine is a boutique technology &amp; SaaS company engineering niche, high-value
             solutions across Industrial AI, cognitive ERP decoupling, frontier R&amp;D, data
             services and beyond — for high-performance sectors where generic services fall short.
           </p>
@@ -91,7 +91,7 @@ useHead({
     <section class="relative overflow-hidden border-y border-hairline bg-surface/30">
       <AuroraBackground dots />
       <div class="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <SectionHeading eyebrow="Why Zettamine" title="A boutique built for the hard problems.">
+        <SectionHeading eyebrow="Why ZettaMine" title="A boutique built for the hard problems.">
           Most firms chase volume. We chase the frontier — the niche, defensible work where deep
           expertise compounds into outcomes others can't reach.
         </SectionHeading>
@@ -127,7 +127,7 @@ useHead({
     <!-- ====================== LABS SPOTLIGHT ====================== -->
     <section class="mx-auto max-w-7xl px-5 sm:px-8">
       <div v-reveal class="relative overflow-hidden rounded-[2rem] border border-hairline">
-        <div class="absolute inset-0 -z-10 bg-ink-950" />
+        <div class="absolute inset-0 -z-10 bg-[#1c1009]" />
         <div class="absolute inset-0 -z-10 opacity-80" style="background: radial-gradient(90% 120% at 85% 10%, rgba(255,174,38,0.22), transparent 55%), radial-gradient(80% 120% at 10% 90%, rgba(251,59,34,0.25), transparent 55%)" />
         <div class="absolute inset-0 -z-10 bg-grid opacity-40" />
         <div class="grid items-center gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:p-16">

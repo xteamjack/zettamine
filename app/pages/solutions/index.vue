@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { solutions, allTopicCount } from '~/data/solutions'
 
-useHead({ title: 'Solutions — Zettamine' })
+useHead({ title: 'Solutions — ZettaMine' })
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 import type { NuxtError } from '#app'
 const props = defineProps<{ error: NuxtError }>()
 const is404 = computed(() => props.error?.statusCode === 404)
-useHead({ title: is404.value ? 'Page not found — Zettamine' : 'Something went wrong — Zettamine' })
+useHead({ title: is404.value ? 'Page not found — ZettaMine' : 'Something went wrong — ZettaMine' })
 </script>
 
 <template>

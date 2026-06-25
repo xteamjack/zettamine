@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { company } from '~/data/site'
-useHead({ title: 'Contact — Zettamine' })
+useHead({ title: 'Contact — ZettaMine' })
 
 const reachItems = [
   { icon: 'lucide:mail', label: 'General', value: company.email, href: `mailto:${company.email}` },

@@ -1,7 +1,7 @@
 import { solutions, allTopicCount } from './solutions'
 
 export const company = {
-  name: 'Zettamine',
+  name: 'ZettaMine',
   domain: 'zettamine.com',
   tagline: 'The Innovation-Driven Enterprise',
   promise:
@@ -100,7 +100,7 @@ export const story = [
   {
     year: '2024',
     title: 'A different kind of firm',
-    body: 'Zettamine is founded on a contrarian bet: that the most valuable technology work is the work most firms avoid — niche, frontier and deeply innovative.',
+    body: 'ZettaMine is founded on a contrarian bet: that the most valuable technology work is the work most firms avoid — niche, frontier and deeply innovative.',
   },
   {
     year: '2024',

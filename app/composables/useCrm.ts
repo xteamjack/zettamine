@@ -1,7 +1,7 @@
 /**
  * Resolves the URL of the companion CRM app (repo: n_crmLeadRegister, port
  * 3010), which Caddy reverse-proxies SAME-ORIGIN under the `/crm` slug on
- * whichever Zettamine host is serving this site:
+ * whichever ZettaMine host is serving this site:
  *   - prod   → https://zettamine.com/crm
  *   - QA/dev → https://zettamine.qa/crm
  *

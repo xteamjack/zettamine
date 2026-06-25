@@ -2,7 +2,7 @@
 import { values, stats, differentiators, company } from '~/data/site'
 import { solutions, allTopicCount } from '~/data/solutions'
 
-useHead({ title: 'About — Zettamine' })
+useHead({ title: 'About — ZettaMine' })
 </script>
 
 <template>
@@ -10,7 +10,7 @@ useHead({ title: 'About — Zettamine' })
     <PageHero
       eyebrow="About"
       title="An innovation house — not a body shop."
-      intro="Zettamine is an innovation-driven enterprise. We deliver next-generation solutions that drive tangible business value in high-performance sectors. Generic, run-of-the-mill services are not our focus; instead, we specialise in niche, high-value and deeply innovative technology areas."
+      intro="ZettaMine is an innovation-driven enterprise. We deliver next-generation solutions that drive tangible business value in high-performance sectors. Generic, run-of-the-mill services are not our focus; instead, we specialise in niche, high-value and deeply innovative technology areas."
     >
       <template #actions>
         <AppButton to="/solutions" size="lg" icon-right="lucide:arrow-right">Our solutions</AppButton>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { approachSteps, differentiators } from '~/data/site'
-useHead({ title: 'Our Approach — Zettamine' })
+useHead({ title: 'Our Approach — ZettaMine' })
 </script>
 
 <template>

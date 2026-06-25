@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
     :class="scrolled || megaOpen ? 'glass border-b border-hairline' : 'border-b border-transparent'"
   >
     <div class="mx-auto flex h-[4.6rem] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
-      <NuxtLink to="/" class="-m-2 rounded-xl p-2" aria-label="Zettamine home">
+      <NuxtLink to="/" class="-m-2 rounded-xl p-2" aria-label="ZettaMine home">
         <BrandLogo />
       </NuxtLink>
 

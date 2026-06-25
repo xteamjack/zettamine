@@ -1,13 +1,17 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="zg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+    <linearGradient id="zg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFC555"/>
-      <stop offset="0.55" stop-color="#FB3B22"/>
-      <stop offset="1" stop-color="#9E150E"/>
+      <stop offset="0.5" stop-color="#FB3B22"/>
+      <stop offset="1" stop-color="#C0140A"/>
     </linearGradient>
+    <clipPath id="zc"><rect x="3" y="3" width="58" height="58" rx="19"/></clipPath>
   </defs>
-  <rect x="2" y="2" width="60" height="60" rx="15" fill="#100D0A"/>
-  <rect x="2" y="2" width="60" height="60" rx="15" stroke="url(#zg)" stroke-width="2.5" stroke-opacity="0.6"/>
-  <path d="M20 19 H44 L26 41 H44" stroke="url(#zg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <circle cx="44" cy="45" r="3.2" fill="#FFC555"/>
+  <g clip-path="url(#zc)">
+    <rect x="3" y="3" width="58" height="58" fill="url(#zg)"/>
+    <path d="M3 40 L40 3 L60 3 L3 60 Z" fill="#ffffff" opacity="0.16"/>
+    <path d="M64 26 L26 64 L64 64 Z" fill="#7A0E06" opacity="0.32"/>
+  </g>
+  <path d="M20 20 H44 L26 41 H44" stroke="#ffffff" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="44" cy="44.5" r="3.1" fill="#ffffff"/>
 </svg>

@@ -95,9 +95,10 @@
     color-scheme: light;
   }
   .dark {
-    --bg: #0c0a08;
-    --bg-elevated: #161210;
-    --hairline: rgb(255 255 255 / 0.08);
+    /* Warm saffron/ember-tinted darks — never pure black. */
+    --bg: #1c130c;
+    --bg-elevated: #281a11;
+    --hairline: rgb(255 240 230 / 0.10);
     color-scheme: dark;
   }
 
