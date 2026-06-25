@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+# Builds this standalone Nuxt marketing site and publishes the static output to
+# GitHub Pages. Pages is static-only — the CRM/auth/SSR infra is NOT here;
+# "Client Login" links out to the CRM's real host (NUXT_PUBLIC_CRM_URL).
+#
+# One-time setup: repo → Settings → Pages → "Build and deployment" →
+# Source = "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {} # run manually from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NUXT_GITHUB_PAGES: 'true'
+      # Project page served at https://<owner>.github.io/<repo>/ — the app
+      # baseURL must equal "/<repo>/". Derived from the repo name (here:
+      # "zettamine"). For a custom domain later: set this to "/" + add public/CNAME.
+      NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
+      # The CRM is NOT on Pages — point "Client Login" at the real CRM host.
+      NUXT_PUBLIC_CRM_URL: https://crm.zettamine.com
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate static site
+        run: pnpm run generate
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

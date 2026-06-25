@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+
+/* @nuxtjs/color-mode toggles a `.dark` class on <html>. Tell Tailwind v4 to
+   treat `dark:` as "inside a .dark subtree" rather than the media default. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ----------------------------------------------------------------------------
+   Design tokens — saffron (warm gold→orange) flowing into ember (red core).
+   These power every gradient, glow and accent across the site.
+---------------------------------------------------------------------------- */
+@theme {
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Saffron — the warm signature */
+  --color-saffron-50: #fff8eb;
+  --color-saffron-100: #ffefc9;
+  --color-saffron-200: #ffdd94;
+  --color-saffron-300: #ffc555;
+  --color-saffron-400: #ffae26;
+  --color-saffron-500: #f8910a;
+  --color-saffron-600: #dc6e03;
+  --color-saffron-700: #b64e07;
+  --color-saffron-800: #933d0d;
+  --color-saffron-900: #79330e;
+  --color-saffron-950: #451804;
+
+  /* Ember — the red core */
+  --color-ember-50: #fff1f0;
+  --color-ember-100: #ffe0dd;
+  --color-ember-200: #ffc5c0;
+  --color-ember-300: #ff9e95;
+  --color-ember-400: #ff6552;
+  --color-ember-500: #fb3b22;
+  --color-ember-600: #e81e0b;
+  --color-ember-700: #c0140a;
+  --color-ember-800: #9e150e;
+  --color-ember-900: #821813;
+  --color-ember-950: #470705;
+
+  /* Neutral ink — slightly warm charcoal so it never feels clinical */
+  --color-ink-50: #f7f6f4;
+  --color-ink-100: #eceae6;
+  --color-ink-200: #d7d3cb;
+  --color-ink-300: #b4ad9f;
+  --color-ink-400: #8a8273;
+  --color-ink-500: #6b6253;
+  --color-ink-600: #524a3e;
+  --color-ink-700: #3f382f;
+  --color-ink-800: #2a251f;
+  --color-ink-900: #1a1611;
+  --color-ink-950: #100d0a;
+
+  --shadow-glow: 0 0 0 1px rgb(248 145 10 / 0.12), 0 18px 60px -12px rgb(251 59 34 / 0.45);
+
+  --animate-aurora: aurora 22s ease-in-out infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
+  --animate-spin-slow: spin 26s linear infinite;
+  --animate-pulse-glow: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(6%, -4%, 0) scale(1.08); }
+  66% { transform: translate3d(-5%, 5%, 0) scale(0.96); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+/* ----------------------------------------------------------------------------
+   Base
+---------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    --bg: #fbf9f5;
+    --bg-elevated: #ffffff;
+    --hairline: rgb(16 13 10 / 0.08);
+    color-scheme: light;
+  }
+  .dark {
+    --bg: #0c0a08;
+    --bg-elevated: #161210;
+    --hairline: rgb(255 255 255 / 0.08);
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: var(--hairline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--color-ink-800);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+  .dark body {
+    color: var(--color-ink-100);
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  ::selection {
+    background: var(--color-ember-500);
+    color: #fff;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--color-saffron-500), var(--color-ember-600));
+    border-radius: 999px;
+    border: 3px solid var(--bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ember-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Signature utilities
+---------------------------------------------------------------------------- */
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-mono { font-family: var(--font-mono); }
+
+  /* Warm saffron→ember text gradient */
+  .text-gradient {
+    background-image: linear-gradient(110deg, var(--color-saffron-400), var(--color-ember-500) 55%, var(--color-ember-700));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-soft {
+    background-image: linear-gradient(110deg, var(--color-saffron-300), var(--color-ember-400));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* The kicker / eyebrow label used above headings */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Glassmorphism surface that adapts to theme */
+  .glass {
+    background: color-mix(in srgb, var(--bg-elevated) 72%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  .border-hairline { border-color: var(--hairline); }
+  .bg-surface { background-color: var(--bg-elevated); }
+
+  /* Animated conic ring used behind logos / hero */
+  .ring-conic {
+    background: conic-gradient(from 0deg, var(--color-saffron-400), var(--color-ember-500), var(--color-ember-700), var(--color-saffron-400));
+  }
+
+  /* Shimmering border sweep for "premium" cards */
+  .shimmer-border {
+    position: relative;
+    background:
+      linear-gradient(var(--bg-elevated), var(--bg-elevated)) padding-box,
+      linear-gradient(110deg, transparent 20%, var(--color-saffron-400), var(--color-ember-500), transparent 80%) border-box;
+    border: 1px solid transparent;
+    background-size: 100% 100%, 200% 100%;
+    animation: shimmer 6s linear infinite;
+  }
+
+  /* Subtle dotted / grid backdrops */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--hairline) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--hairline) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+  .bg-dots {
+    background-image: radial-gradient(var(--hairline) 1.1px, transparent 1.1px);
+    background-size: 22px 22px;
+  }
+
+  .glow-ring { box-shadow: var(--shadow-glow); }
+
+  /* Reveal-on-scroll (driven by composables/useReveal) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .mask-fade-r { -webkit-mask-image: linear-gradient(to right, #000 70%, transparent); mask-image: linear-gradient(to right, #000 70%, transparent); }
+  .mask-fade-x { -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); }
+}
+
+/* Page transition (configured in nuxt.config) */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+.page-enter-from { opacity: 0; transform: translateY(10px); }
+.page-leave-to { opacity: 0; transform: translateY(-6px); }

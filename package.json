@@ -1,0 +1,32 @@
+{
+  "name": "zettamine-corp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Zettamine — corporate website (standalone Nuxt 4 + Vue 3 + Tailwind v4)",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "generate:pages": "cross-env NUXT_GITHUB_PAGES=true nuxt generate",
+    "preview": "nuxt preview",
+    "start": "cross-env NITRO_HOST=127.0.0.1 NITRO_PORT=5003 node .output/server/index.mjs",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "mongodb": "^7.3.0",
+    "nuxt": "^4.4.2",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.105",
+    "@nuxt/icon": "^2.2.1",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "@vueuse/core": "^13.0.0",
+    "@vueuse/nuxt": "^13.0.0",
+    "cross-env": "^7.0.3",
+    "tailwindcss": "^4.1.4"
+  }
+}

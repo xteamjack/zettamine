@@ -1,0 +1,9 @@
+<script setup lang="ts">
+import { legalDocs } from '~/data/legal'
+const doc = legalDocs['responsible-ai']!
+useHead({ title: `${doc.title} — Zettamine` })
+</script>
+
+<template>
+  <LegalDoc :doc="doc" />
+</template>
