@@ -162,16 +162,6 @@ useHead({
       </div>
     </section>
 
-    <!-- ====================== GALLERY ====================== -->
-    <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8">
-      <SectionHeading center eyebrow="Inside ZettaMine" title="Life at the frontier.">
-        Moments from our events, builds and community.
-      </SectionHeading>
-      <div v-reveal class="mt-12">
-        <RotatingGallery />
-      </div>
-    </section>
-
     <!-- ====================== INDUSTRIES ====================== -->
     <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8">
       <SectionHeading center eyebrow="Where we work" title="Built for high-performance sectors." />

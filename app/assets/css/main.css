@@ -39,6 +39,20 @@
   --color-ember-900: #821813;
   --color-ember-950: #470705;
 
+  /* Elevate — a cool indigo that balances the warm palette and carries the
+     primary calls to action, so the site reads less uniformly saffron. */
+  --color-elevate-50: #eef1ff;
+  --color-elevate-100: #e0e5ff;
+  --color-elevate-200: #c6cdff;
+  --color-elevate-300: #a3aaff;
+  --color-elevate-400: #8186fb;
+  --color-elevate-500: #635bf4;
+  --color-elevate-600: #4f3fe0;
+  --color-elevate-700: #4232bd;
+  --color-elevate-800: #372c97;
+  --color-elevate-900: #312a78;
+  --color-elevate-950: #1e1a46;
+
   /* Neutral ink — slightly warm charcoal so it never feels clinical */
   --color-ink-50: #f7f6f4;
   --color-ink-100: #eceae6;
