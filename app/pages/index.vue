@@ -5,7 +5,7 @@ import { stats, differentiators, approachSteps, industries, company } from '~/da
 const marqueeItems = solutions.flatMap((s) => s.topics.map((t) => t.title))
 
 useHead({
-  title: 'ZettaMine — Niche, High-Value, Deeply Innovative Technology',
+  title: 'ZettaMine · Niche, High-Value, Deeply Innovative Technology',
 })
 </script>
 
@@ -28,15 +28,15 @@ useHead({
             <span class="font-medium text-ink-600 dark:text-ink-200">The innovation-driven enterprise</span>
           </div>
 
-          <h1 v-reveal="{ delay: 60 }" class="mt-6 font-display text-[2.7rem] font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.2rem]">
+          <h1 v-reveal="{ delay: 60 }" class="mt-6 font-display text-[2.2rem] font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-[4.2rem]">
             We build what's<br />
-            <span class="text-gradient">next</span> — not normal.
+            <span class="text-gradient">next</span>, not normal.
           </h1>
 
           <p v-reveal="{ delay: 130 }" class="mt-6 max-w-xl text-lg leading-relaxed text-ink-600 dark:text-ink-200 sm:text-xl">
             ZettaMine is a boutique technology &amp; SaaS company engineering niche, high-value
-            solutions across Industrial AI, cognitive ERP decoupling, frontier R&amp;D, data
-            services and beyond — for high-performance sectors where generic services fall short.
+            solutions across Industrial AI, cognitive ERP, frontier R&amp;D, data
+            services and beyond, for high-performance sectors where generic services fall short.
           </p>
 
           <div v-reveal="{ delay: 200 }" class="mt-9 flex flex-wrap items-center gap-3">
@@ -72,8 +72,8 @@ useHead({
     <section class="relative mx-auto max-w-7xl px-5 py-24 sm:px-8">
       <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeading eyebrow="What we do" title="Six pillars. One philosophy.">
-          We deliberately specialise in niche, high-value technology areas — each a deep practice,
-          all sharing a single innovation-first DNA.
+          We deliberately specialise in niche, high-value technology areas. Each is a deep practice,
+          and all share a single innovation-first DNA.
         </SectionHeading>
         <AppButton to="/solutions" variant="ghost" icon-right="lucide:arrow-right" class="shrink-0 self-start md:self-end">
           All solutions
@@ -92,7 +92,7 @@ useHead({
       <AuroraBackground dots />
       <div class="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <SectionHeading eyebrow="Why ZettaMine" title="A boutique built for the hard problems.">
-          Most firms chase volume. We chase the frontier — the niche, defensible work where deep
+          Most firms chase volume. We chase the frontier, the niche, defensible work where deep
           expertise compounds into outcomes others can't reach.
         </SectionHeading>
 
@@ -114,8 +114,8 @@ useHead({
     <!-- ========================= APPROACH ========================= -->
     <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8">
       <SectionHeading center eyebrow="How we work" title="A low-risk path from idea to impact.">
-        A repeatable delivery rhythm that de-risks innovation — outcome first, prototype fast,
-        decouple cleanly, then enable your teams to carry it forward.
+        A repeatable delivery rhythm that de-risks innovation. Outcome first, prototype fast,
+        build cleanly alongside your core, then enable your teams to carry it forward.
       </SectionHeading>
       <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         <div v-for="(step, i) in approachSteps" :key="step.no" v-reveal="{ delay: i * 80 }">
@@ -137,7 +137,7 @@ useHead({
               Our innovation incubator turns science fiction into shipping software.
             </h2>
             <p class="mt-5 max-w-lg text-lg leading-relaxed text-ink-200">
-              Autonomous agents, cognitive digital twins, BCI, quantum-inspired optimisation — we
+              Autonomous agents, cognitive digital twins, BCI and quantum-inspired optimisation. We
               experiment at the edge so your enterprise can deploy with confidence.
             </p>
             <AppButton to="/labs" variant="primary" size="lg" class="mt-8" icon-right="lucide:arrow-up-right">
@@ -162,10 +162,20 @@ useHead({
       </div>
     </section>
 
+    <!-- ====================== GALLERY ====================== -->
+    <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8">
+      <SectionHeading center eyebrow="Inside ZettaMine" title="Life at the frontier.">
+        Moments from our events, builds and community.
+      </SectionHeading>
+      <div v-reveal class="mt-12">
+        <RotatingGallery />
+      </div>
+    </section>
+
     <!-- ====================== INDUSTRIES ====================== -->
     <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8">
       <SectionHeading center eyebrow="Where we work" title="Built for high-performance sectors." />
-      <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      <div class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
         <div
           v-for="(ind, i) in industries"
           :key="ind.label"
@@ -180,6 +190,15 @@ useHead({
       </div>
     </section>
 
+    <!-- ====================== CLIENTELE ====================== -->
+    <section class="mx-auto max-w-7xl px-5 pb-4 sm:px-8">
+      <SectionHeading center eyebrow="Clientele" title="Trusted by teams that build at scale." />
+      <div v-reveal class="mt-12">
+        <ClienteleWall />
+      </div>
+    </section>
+
+    <div class="h-20" />
     <CtaBand />
     <div class="h-20" />
   </div>

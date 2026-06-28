@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { story } from '~/data/site'
-useHead({ title: 'Our Story — ZettaMine' })
+useHead({ title: 'Our Story · ZettaMine' })
 </script>
 
 <template>
@@ -8,7 +8,7 @@ useHead({ title: 'Our Story — ZettaMine' })
     <PageHero
       eyebrow="Our story"
       title="Born from a contrarian bet."
-      intro="That the most valuable technology work is the work most firms avoid — niche, frontier and deeply innovative. Here is how that conviction became ZettaMine."
+      intro="That the most valuable technology work is the work most firms avoid, the niche, frontier and deeply innovative. Here is how that conviction became ZettaMine."
     />
 
     <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8">
@@ -21,8 +21,8 @@ useHead({ title: 'Our Story — ZettaMine' })
               where the problems are genuinely hard and the value is genuinely defensible.
             </p>
             <p>
-              Every milestone below pushed that thesis further — from opening our Frontier Tech Labs
-              to formalising a radical alternative to forced ERP migration.
+              Every milestone below pushed that thesis further, from opening our Frontier Tech Labs
+              to formalising a pragmatic alternative to forced ERP migration.
             </p>
           </div>
           <div class="mt-8 rounded-2xl border border-hairline bg-surface/60 p-6">
@@ -30,7 +30,7 @@ useHead({ title: 'Our Story — ZettaMine' })
             <p class="mt-3 font-display text-lg font-medium leading-snug">
               "If it already exists off the shelf, it isn't our problem to solve."
             </p>
-            <p class="mt-3 text-sm text-ink-500 dark:text-ink-400">— The ZettaMine operating principle</p>
+            <p class="mt-3 text-sm text-ink-500 dark:text-ink-400">The ZettaMine operating principle</p>
           </div>
         </div>
 
@@ -49,7 +49,7 @@ useHead({ title: 'Our Story — ZettaMine' })
           The next decade of enterprise technology will be built at the edges. We intend to build it there.
         </h2>
         <p v-reveal="{ delay: 80 }" class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-ink-600 dark:text-ink-300">
-          Autonomous systems, cognitive interfaces, decoupled architectures and ground-truth data —
+          Autonomous systems, cognitive interfaces, decoupled architectures and ground-truth data,
           the foundations of tomorrow, shipped today.
         </p>
         <AppButton to="/labs" size="lg" class="mt-9" icon-right="lucide:arrow-up-right">Explore Frontier Tech Labs</AppButton>

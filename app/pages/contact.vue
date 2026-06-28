@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { company } from '~/data/site'
-useHead({ title: 'Contact — ZettaMine' })
+useHead({ title: 'Contact · ZettaMine' })
 
 const reachItems = [
   { icon: 'lucide:mail', label: 'General', value: company.email, href: `mailto:${company.email}` },
@@ -14,7 +14,7 @@ const reachItems = [
     <PageHero
       eyebrow="Contact"
       title="Let's talk."
-      intro="Tell us what you're trying to make real. Whether it's a moonshot or a margin problem, we'll tell you honestly what's achievable — and what it's worth."
+      intro="Tell us what you're trying to make real. Whether it's a moonshot or a margin problem, we'll tell you honestly what's achievable, and what it's worth."
     />
 
     <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
@@ -67,7 +67,7 @@ const reachItems = [
             <div class="absolute inset-0 -z-10 opacity-90" style="background: radial-gradient(120% 100% at 100% 0%, rgba(255,174,38,0.16), transparent 55%), radial-gradient(120% 100% at 0% 100%, rgba(251,59,34,0.16), transparent 55%)" />
             <Icon name="lucide:zap" class="h-7 w-7 text-ember-500" />
             <p class="mt-3 font-display text-lg font-semibold leading-snug">Typical first reply: within one business day.</p>
-            <p class="mt-2 text-sm text-ink-600 dark:text-ink-300">You'll talk to the people who actually build — not a sales funnel.</p>
+            <p class="mt-2 text-sm text-ink-600 dark:text-ink-300">You'll talk to the people who actually build, not a sales funnel.</p>
           </div>
         </div>
       </div>

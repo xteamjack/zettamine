@@ -19,7 +19,7 @@ withDefaults(
       <h2 class="mx-auto mt-4 max-w-3xl font-display text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
         <slot name="title">{{ title }}</slot>
       </h2>
-      <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-600 dark:text-ink-200">
+      <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-700 dark:text-ink-200">
         {{ subtitle }}
       </p>
       <div class="mt-9 flex flex-wrap items-center justify-center gap-3">

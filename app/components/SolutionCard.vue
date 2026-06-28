@@ -21,7 +21,7 @@ defineProps<{ solution: Solution; index: number }>()
 
     <div class="relative flex items-center justify-between">
       <IconBadge :icon="solution.icon" :gradient="solution.gradient" size="lg" />
-      <span class="font-mono text-sm text-ink-300 dark:text-ink-500">{{ String(index + 1).padStart(2, '0') }}</span>
+      <span class="font-mono text-sm text-ink-400 dark:text-ink-500">{{ String(index + 1).padStart(2, '0') }}</span>
     </div>
 
     <h3 class="relative mt-5 font-display text-xl font-semibold leading-tight">{{ solution.menuTitle }}</h3>

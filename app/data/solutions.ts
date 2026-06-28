@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------------------
 // Single source of truth for ZettaMine's six solution pillars.
-// Authored from n_dh_docs/zetta/website/main.md and expanded for the site.
+// Authored from n_dh_docs/zetta/website/main.md and the site-revamp plan.
+// Voice: SME first, no dash punctuation in any rendered string.
 // ---------------------------------------------------------------------------
 
 export interface Topic {
@@ -9,6 +10,15 @@ export interface Topic {
   pitch: string
   highlights: string[]
   icon: string
+}
+
+export interface Offering {
+  name: string
+  type: 'Assessment' | 'Accelerator' | 'Managed Service' | 'SaaS Product' | 'Workshop'
+  summary: string
+  deliverables: string[]
+  idealFor: string
+  timeframe?: string
 }
 
 export interface Solution {
@@ -24,23 +34,24 @@ export interface Solution {
   accent: string
   outcomes: string[]
   topics: Topic[]
+  offerings: Offering[]
 }
 
 export const solutions: Solution[] = [
   {
     slug: 'industrial-ai',
     menuTitle: 'Industrial AI',
-    heading: 'Industry 4.0 & Beyond: AI-Powered Industrial Intelligence',
+    heading: 'Industry 4.0 for the Mid Sized Factory: AI on the Shop Floor',
     tagline: 'Autonomous, data-driven operations',
     pitch:
-      'Transforming traditional manufacturing and industrial operations into highly autonomous, data-driven ecosystems. We leverage cutting-edge AI, IoT and spatial computing to unlock unprecedented efficiency, safety and productivity on the factory floor and beyond.',
+      'We help smaller manufacturers turn traditional operations into data-driven ones, one practical step at a time. Using AI, IoT and spatial computing, you unlock efficiency, safety and productivity on the factory floor without a transformation programme. Start with one machine, measure the saving in money, and let it fund the next step.',
     icon: 'lucide:factory',
     gradient: ['#ffae26', '#fb3b22'],
     accent: '#f8910a',
     outcomes: [
-      'Up to 40% less unplanned downtime via predictive maintenance',
-      'Real-time visibility across OT/IT data streams',
-      'Closed-loop optimisation on the factory edge',
+      'Up to 40 percent less unplanned downtime through predictive maintenance',
+      'Real-time visibility across your OT and IT data streams',
+      'Closed-loop optimisation on the factory edge, proven on one line first',
     ],
     topics: [
       {
@@ -48,11 +59,11 @@ export const solutions: Solution[] = [
         title: 'Cognitive Digital Twins',
         icon: 'lucide:boxes',
         pitch:
-          'Create virtual replicas of physical assets and processes to simulate, monitor and optimise industrial operations in real-time.',
+          'Create virtual replicas of physical assets and processes to simulate, monitor and optimise industrial operations in real time.',
         highlights: [
           'Real-time 3D spatial modelling of physical assets',
           'AI-driven simulation for process optimisation and bottleneck prediction',
-          'Seamless integration with OT/IT data streams for live monitoring',
+          'Seamless integration with OT and IT data streams for live monitoring',
         ],
       },
       {
@@ -92,33 +103,97 @@ export const solutions: Solution[] = [
         ],
       },
     ],
+    offerings: [
+      {
+        name: 'Predictive Maintenance Accelerator',
+        type: 'Accelerator',
+        summary:
+          'Stand up predictive maintenance on one critical machine and turn its unplanned downtime into a number you can see.',
+        deliverables: [
+          'Connected data feed from the chosen asset',
+          'A working predictive model and live alerts',
+          'A simple dashboard and a costed business case',
+        ],
+        idealFor: 'A plant owner who keeps losing hours to the same failures',
+        timeframe: '6 to 8 weeks',
+      },
+      {
+        name: 'Factory Vision for Quality and Safety',
+        type: 'Managed Service',
+        summary:
+          'Automated visual checking on one line, run for you, so you catch defects and unsafe behaviour without adding headcount.',
+        deliverables: [
+          'Cameras and edge inference set up on one line',
+          'Defect and hazard alerts in real time',
+          'A short weekly quality report',
+        ],
+        idealFor: 'A smaller manufacturer who cannot staff a full quality function',
+      },
+      {
+        name: 'Cognitive Twin Pilot',
+        type: 'Accelerator',
+        summary:
+          'A working digital model of one line or process, so you can test a change before you spend on it.',
+        deliverables: [
+          'A digital twin of one line or process',
+          'Simulation of a planned change',
+          'A bottleneck and capacity readout',
+        ],
+        idealFor: 'An operations head planning a capacity or layout change',
+      },
+      {
+        name: 'Operations Readiness Check',
+        type: 'Assessment',
+        summary:
+          'A short assessment that maps the data you already have, the gaps, and the one first use case worth doing.',
+        deliverables: [
+          'A map of available data sources and gaps',
+          'A ranked shortlist of first use cases',
+          'A clear go or no go recommendation',
+        ],
+        idealFor: 'An SME deciding whether the bigger steps are worth taking',
+        timeframe: '2 to 3 weeks',
+      },
+    ],
   },
   {
     slug: 'cognitive-erp-decoupling',
-    menuTitle: 'Cognitive ERP Decoupling',
-    heading: 'Smart Decoupling: Minimising SAP Footprint, Defying Cloud Migration Costs',
-    tagline: 'Escape the 2028 deadline — on your terms',
+    menuTitle: 'Cognitive ERP',
+    heading: 'Get More From SAP: Practical AI on the Core You Already Run',
+    tagline: 'Augment first, decouple only where it pays',
     pitch:
-      "Forced cloud migrations (like S/4HANA) and escalating licensing costs shouldn't dictate your IT roadmap. We offer a radical, cost-effective alternative for SMEs: Cognitive Decoupling. By deploying next-gen AI wrappers, edge microservices and standalone automation, we systematically extract high-value workflows out of your legacy SAP core — shrinking your footprint, mitigating end-of-life risk and delivering agility without a full overhaul.",
-    icon: 'lucide:unplug',
+      'Your SAP investment is an asset, not a liability. Most teams are not ready to rip out the core, and they should not have to. We help you get more from SAP by layering modern, AI assisted experiences on top of it, offloading the workflows that are expensive or slow inside the core, and decoupling a capability only where the numbers clearly justify it. Every step is practical, reversible, and proven with a working model before you commit. You gain agility and a lower cost of ownership while your system of record stays exactly where it is.',
+    icon: 'lucide:layers-3',
     gradient: ['#ff6552', '#9e150e'],
     accent: '#e81e0b',
     outcomes: [
-      'Dramatically lower SAP licensing & maintenance spend',
-      'Mitigated 2028 end-of-life risk without a forced migration',
-      'Modern UX layered over a protected legacy core',
+      'More value from the SAP you already run, with no forced migration',
+      'Lower total cost of ownership as casual users move to lighter experiences',
+      'Modern, AI assisted experiences on a system of record that stays in place',
     ],
     topics: [
       {
         slug: 'cognitive-ux-intelligent-ai-wrappers',
-        title: 'Cognitive UX & Intelligent AI Wrappers',
+        title: 'Cognitive UX & Intelligent AI Assistants',
         icon: 'lucide:message-square-text',
         pitch:
-          'Bypass the clunky legacy SAP GUI. We build modern, conversational AI interfaces and role-based mobile apps that interact with SAP in the background — slashing training time and user license requirements.',
+          'Give every SAP user a modern, conversational experience. We build AI assistants and role-based mobile and web apps that sit on top of SAP and talk to it in the background, so people get their work done faster while the core stays untouched. This also lets casual users move to lighter, lower cost interfaces.',
         highlights: [
           'Voice and chat-driven natural language interfaces for complex SAP transactions',
-          'Role-specific mobile and web applications that shield users from legacy complexity',
-          'Shift casual users to lightweight external portals to optimise SAP licensing costs',
+          'Role-specific mobile and web apps that keep teams clear of legacy complexity',
+          'Lighter external portals for casual users to optimise SAP licensing cost',
+        ],
+      },
+      {
+        slug: 'data-liberation-real-time-predictive-analytics',
+        title: 'Real-Time Analytics Alongside SAP',
+        icon: 'lucide:database',
+        pitch:
+          'Add modern analytics next to SAP without disturbing it. We securely stream a copy of the data you need into a scalable analytics layer, so leaders get real-time KPIs and predictive insight while SAP remains the system of record.',
+        highlights: [
+          'A streamed copy of core data in a cost-effective analytics layer',
+          'Real-time predictive analytics and executive KPI dashboards',
+          'Cross-platform data fusion with external IoT and market feeds',
         ],
       },
       {
@@ -126,36 +201,103 @@ export const solutions: Solution[] = [
         title: 'Autonomous Process Offloading',
         icon: 'lucide:split',
         pitch:
-          'Stop paying premium ERP overhead for standard operational tasks. We offload high-volume finance and supply-chain workflows into intelligent, standalone systems that sync seamlessly with your core.',
+          'For the workflows that are expensive or slow inside the core, we run them in an intelligent, standalone service that syncs seamlessly back to SAP. You stop paying premium core overhead for routine, high-volume work.',
         highlights: [
-          'High-volume, AI-assisted invoice reconciliation built outside the SAP core',
-          'Intelligent supply-chain forecasting and inventory optimisation using external AI models',
-          'Automated master-data cleansing and governance pipelines acting as a secure firewall',
-        ],
-      },
-      {
-        slug: 'data-liberation-real-time-predictive-analytics',
-        title: 'Data Liberation & Real-Time Predictive Analytics',
-        icon: 'lucide:database',
-        pitch:
-          'Break free from expensive, proprietary SAP BI/BW modules. We securely extract and stream your core data into modern, scalable cloud data lakes for advanced AI modelling.',
-        highlights: [
-          'Decoupling transactional data from legacy SAP into cost-effective data lakes',
-          'Real-time predictive analytics and executive KPI dashboards independent of SAP',
-          'Cross-platform data fusion integrating SAP with external IoT and market feeds',
+          'High-volume, AI-assisted invoice reconciliation that syncs back to SAP',
+          'Intelligent supply-chain forecasting and inventory optimisation',
+          'Automated master-data cleansing and governance acting as a secure firewall',
         ],
       },
       {
         slug: 'the-strangler-fig-erp-modernization-strategy',
-        title: 'The "Strangler Fig" ERP Modernization',
+        title: 'Optional Decoupling, Where It Pays',
         icon: 'lucide:sprout',
         pitch:
-          'A risk-free, phased approach to ERP optimisation. We incrementally replace heavy SAP custom code (ABAP) and legacy modules with agile, external microservices.',
+          'When a specific capability has a clear business case, we lift it out of the core and run it as an agile service behind an API, gradually and reversibly. This is a choice you make capability by capability, only when the value is proven, never a forced big bang.',
         highlights: [
-          'Microservices-based extraction of high-value, bottlenecked business processes',
-          'Seamless API gateways that isolate and protect the legacy ERP core',
-          'Gradual, self-funding modernisation that eliminates the pressure of 2028 deadlines',
+          'Microservices-based extraction of high-value, bottlenecked processes',
+          'Secure API gateways that isolate and protect the legacy ERP core',
+          'Gradual, self-funding modernisation with no forced deadline',
         ],
+      },
+    ],
+    offerings: [
+      {
+        name: 'SAP Value Check',
+        type: 'Assessment',
+        summary:
+          'A short, honest look at where you can get more from the SAP you already run, without a migration.',
+        deliverables: [
+          'A ranked list of augmentation and offloading opportunities',
+          'A rough cost of coexistence model',
+          'A recommended first move',
+        ],
+        idealFor: 'An SME that feels SAP is expensive but does not want to replace it',
+        timeframe: '3 to 4 weeks',
+      },
+      {
+        name: 'SAP Assistant Accelerator',
+        type: 'Accelerator',
+        summary:
+          'A modern, conversational experience on top of SAP for one high friction process, so your lean team spends less time fighting the screen.',
+        deliverables: [
+          'A conversational or guided assistant for one process',
+          'Live connection to SAP in the background',
+          'A measured cut in training time',
+        ],
+        idealFor: 'An IT head cutting training time and licence load',
+        timeframe: '5 to 7 weeks',
+      },
+      {
+        name: 'SAP Mobile Workforce Accelerator',
+        type: 'Accelerator',
+        summary:
+          'Role-based mobile apps for the people who should not need a full SAP seat, so frontline and casual users do their bit from a phone while the core stays untouched.',
+        deliverables: [
+          'One or two mobile journeys live, connected to SAP',
+          'Coverage for shop floor, warehouse, field or approvals',
+          'A clear cut in seat and training cost',
+        ],
+        idealFor: 'An SME with many occasional users paying for heavy licences',
+        timeframe: '5 to 7 weeks',
+      },
+      {
+        name: 'Master Data Health Accelerator',
+        type: 'Accelerator',
+        summary:
+          'Clean up and then keep clean the customer, vendor and material data that quietly breaks your reports and slows your processes.',
+        deliverables: [
+          'A one-off cleanse of one critical data domain',
+          'A simple set of validation rules',
+          'A lightweight governance pipeline that catches bad records before SAP',
+        ],
+        idealFor: 'A smaller firm whose reporting nobody quite trusts',
+        timeframe: '4 to 6 weeks',
+      },
+      {
+        name: 'Process Offloading Service',
+        type: 'Managed Service',
+        summary:
+          'Take one expensive, high-volume workflow, such as invoice matching, and run it in a service that syncs back to SAP.',
+        deliverables: [
+          'One high-volume workflow run outside the core',
+          'Two-way sync with SAP',
+          'Lower core overhead for routine work',
+        ],
+        idealFor: 'Finance and supply chain teams in a smaller firm',
+      },
+      {
+        name: 'Ninety Day Working Model',
+        type: 'Accelerator',
+        summary:
+          'Prove a single, bounded ERP improvement in production shape in one quarter, before you commit real budget.',
+        deliverables: [
+          'A scoped, production-shaped working model',
+          'Measured results against a clear goal',
+          'A go or no go decision with the numbers behind it',
+        ],
+        idealFor: 'An SME that wants proof before commitment',
+        timeframe: '90 days',
       },
     ],
   },
@@ -165,7 +307,7 @@ export const solutions: Solution[] = [
     heading: 'The Future, Today: Frontier Technologies R&D',
     tagline: 'Our innovation incubator',
     pitch:
-      "Pushing the boundaries of what's possible. Our Next Gen Labs act as an innovation incubator, experimenting with frontier technologies to build the foundational solutions of tomorrow — turning science fiction into tangible business value.",
+      "Pushing the boundaries of what's possible. Our Next Gen Labs act as an innovation incubator, experimenting with frontier technologies to build the foundational solutions of tomorrow and turning science fiction into tangible business value. Smaller firms cannot fund a research lab, but they can borrow one.",
     icon: 'lucide:flask-conical',
     gradient: ['#ffc555', '#e81e0b'],
     accent: '#dc6e03',
@@ -192,9 +334,9 @@ export const solutions: Solution[] = [
         title: 'Immersive Realities & BCI',
         icon: 'lucide:brain',
         pitch:
-          'Explore the next frontier of human–computer interaction through spatial interfaces and neurotech.',
+          'Explore the next frontier of human and computer interaction through spatial interfaces and neurotech.',
         highlights: [
-          'Enterprise AR/VR training and remote assistance environments',
+          'Enterprise AR and VR training and remote assistance environments',
           'Neurotech research for cognitive load monitoring and hands-free control',
           'Spatial computing interfaces for complex data visualisation',
         ],
@@ -224,6 +366,46 @@ export const solutions: Solution[] = [
         ],
       },
     ],
+    offerings: [
+      {
+        name: 'Agent Proof of Concept Sprint',
+        type: 'Accelerator',
+        summary:
+          'A production-shaped prototype of an AI agent for one real problem in your business, so you find out if it is worth more before you spend more.',
+        deliverables: [
+          'A working agent prototype for one use case',
+          'Guardrails suited to a lean team',
+          'A clear read on whether to go further',
+        ],
+        idealFor: 'A founder curious about agents but wary of the hype',
+        timeframe: '4 to 6 weeks',
+      },
+      {
+        name: 'Frontier Discovery Workshop',
+        type: 'Workshop',
+        summary:
+          'A focused session that sorts which emerging technologies are real for your business from which are noise.',
+        deliverables: [
+          'A shortlist of frontier bets worth funding',
+          'A low-risk first step for each',
+          'A simple prioritisation',
+        ],
+        idealFor: 'An SME leadership team that wants a clear, short list',
+        timeframe: '1 to 2 days',
+      },
+      {
+        name: 'Optimisation Pilot',
+        type: 'Accelerator',
+        summary:
+          'Quantum-inspired optimisation applied to a real routing, scheduling or inventory problem you have today, using the data you already hold.',
+        deliverables: [
+          'An optimisation model on a real problem',
+          'A quantified saving',
+          'A path to put it into production',
+        ],
+        idealFor: 'A smaller operation feeling supply chain cost pressure',
+      },
+    ],
   },
   {
     slug: 'data-services',
@@ -231,13 +413,13 @@ export const solutions: Solution[] = [
     heading: 'Precision Ground Truth: High-Fidelity AI Data Services',
     tagline: 'Pixel-perfect training data',
     pitch:
-      'The foundation of every powerful AI model is high-quality data. We provide specialised, high-precision data annotation services tailored for complex, niche use cases — ensuring your machine learning models are trained on pixel-perfect ground truth.',
+      'The foundation of every powerful AI model is high-quality data. We provide specialised, high-precision data annotation tailored for complex, niche use cases, so your machine learning models are trained on pixel-perfect ground truth. An SME cannot outspend a giant on compute, but it can win on data quality.',
     icon: 'lucide:scan-eye',
     gradient: ['#f8910a', '#c0140a'],
     accent: '#f8910a',
     outcomes: [
       'Pixel-perfect ground truth for safety-critical models',
-      'Domain-verified labelling (medical, autonomy, industrial)',
+      'Domain-verified labelling for medical, autonomy and industrial work',
       'Scalable, audited annotation pipelines with QA baked in',
     ],
     topics: [
@@ -249,7 +431,7 @@ export const solutions: Solution[] = [
           'Deliver pixel-perfect spatial annotations and sensor-fusion labelling for autonomous navigation and robotics.',
         highlights: [
           '3D bounding boxes and point-cloud segmentation for autonomous vehicles',
-          'Sensor-fusion annotation (Camera + LiDAR + Radar)',
+          'Sensor-fusion annotation across Camera, LiDAR and Radar',
           'Semantic segmentation for robotics navigation',
         ],
       },
@@ -260,7 +442,7 @@ export const solutions: Solution[] = [
         pitch:
           'Provide verified, medically compliant data labelling for radiology, pathology and advanced healthcare AI.',
         highlights: [
-          'Radiology and pathology image labelling (X-Ray, MRI, CT)',
+          'Radiology and pathology image labelling for X-Ray, MRI and CT',
           'Cell counting and microscopic image segmentation',
           'HIPAA-compliant, medically verified annotation workflows',
         ],
@@ -286,8 +468,47 @@ export const solutions: Solution[] = [
         highlights: [
           'High-quality instruction-tuning datasets for Generative AI',
           'Audio transcription and speaker diarisation',
-          'Sentiment analysis and Named Entity Recognition (NER) for specialised domains',
+          'Sentiment analysis and Named Entity Recognition for specialised domains',
         ],
+      },
+    ],
+    offerings: [
+      {
+        name: 'Annotation Managed Service',
+        type: 'Managed Service',
+        summary:
+          'Reliable, audited, domain-checked labelling run for you, so a small AI team gets dependable ground truth without building a labelling function.',
+        deliverables: [
+          'Audited annotation pipelines with QA built in',
+          'Domain-verified labelling at agreed quality',
+          'Throughput that scales with your need',
+        ],
+        idealFor: 'An SME product team that needs quality data at a sensible cost',
+      },
+      {
+        name: 'Data Quality Audit',
+        type: 'Assessment',
+        summary:
+          'A check on an existing training set that scores its quality and puts a number on what its errors are costing you.',
+        deliverables: [
+          'A quality score for the dataset',
+          'The rework and risk cost of its errors',
+          'A practical plan to fix the worst gaps',
+        ],
+        idealFor: 'A team about to spend more on models',
+        timeframe: '2 weeks',
+      },
+      {
+        name: 'Sensor Fusion Labelling Pack',
+        type: 'Accelerator',
+        summary:
+          'Camera, LiDAR and radar labelling for an autonomy or robotics milestone, to a safety-grade standard.',
+        deliverables: [
+          'Sensor-fusion labelled data for one milestone',
+          'Safety-grade QA and review',
+          'A repeatable labelling spec',
+        ],
+        idealFor: 'A smaller team shipping a perception feature',
       },
     ],
   },
@@ -297,7 +518,7 @@ export const solutions: Solution[] = [
     heading: 'Empowering the Innovators: Next-Gen Skill Development',
     tagline: 'Turn teams into AI-native innovators',
     pitch:
-      'Technology is only as powerful as the people wielding it. We upskill and reskill enterprise teams, transforming traditional workforces into AI-native innovators ready to tackle the challenges of the digital frontier.',
+      'Technology is only as powerful as the people wielding it. We upskill and reskill enterprise teams, turning traditional workforces into AI-native innovators ready for the digital frontier. Smaller firms cannot outbid big tech for talent, so they grow and borrow it instead. Explore the full programme in our Academy.',
     icon: 'lucide:graduation-cap',
     gradient: ['#ffae26', '#e81e0b'],
     accent: '#dc6e03',
@@ -344,6 +565,45 @@ export const solutions: Solution[] = [
         ],
       },
     ],
+    offerings: [
+      {
+        name: 'AI Native Bootcamp',
+        type: 'Accelerator',
+        summary:
+          'Hands-on training for a cohort of your people in GenAI, IoT and modern delivery, built around your own real projects so the learning sticks.',
+        deliverables: [
+          'A cohort trained on real internal projects',
+          'Role-based tracks and mentorship',
+          'Portfolio work the team keeps',
+        ],
+        idealFor: 'An SME growing its own talent rather than outbidding big tech',
+      },
+      {
+        name: 'CXO Tech Briefing',
+        type: 'Workshop',
+        summary:
+          'A focused executive session that connects the technologies of the future to your own strategy, so a busy SME leader stays relevant without a long course.',
+        deliverables: [
+          'A briefing aligned to your strategy',
+          'A short list of what to act on this year',
+          'Follow-up notes that turn into decisions',
+        ],
+        idealFor: 'CxOs and senior managers with little time to spare',
+        timeframe: '1 day',
+      },
+      {
+        name: 'Continuous Upskilling Subscription',
+        type: 'Managed Service',
+        summary:
+          'Role-based learning and mentorship run on an ongoing basis through GuildTrek, so a lean team keeps its skills current as the field moves.',
+        deliverables: [
+          'Ongoing role-based tracks',
+          'Mentorship and pair-programming',
+          'Recognised certifications',
+        ],
+        idealFor: 'Working professionals and the lean teams they belong to',
+      },
+    ],
   },
   {
     slug: 'strategic-advisory',
@@ -351,7 +611,7 @@ export const solutions: Solution[] = [
     heading: 'Navigating Complexity: Strategic Digital Advisory',
     tagline: 'From objectives to roadmaps',
     pitch:
-      "We don't just build technology; we help you chart the course. Our strategic consulting aligns your high-level business objectives with actionable, innovative technology roadmaps — ensuring every investment delivers maximum impact.",
+      "We don't just build technology, we help you chart the course. Our strategic consulting aligns your high-level business objectives with actionable, innovative technology roadmaps, so every investment delivers maximum impact. For an SME, that means a costed, sequenced plan you can actually afford to follow.",
     icon: 'lucide:compass',
     gradient: ['#fb3b22', '#f8910a'],
     accent: '#fb3b22',
@@ -375,14 +635,14 @@ export const solutions: Solution[] = [
       },
       {
         slug: 'digital-transformation-decoupling-strategy',
-        title: 'Digital Transformation & Decoupling Strategy',
+        title: 'Digital Transformation & Modernisation Strategy',
         icon: 'lucide:workflow',
         pitch:
-          'Craft precise roadmaps to modernise legacy systems and identify optimal automation opportunities.',
+          'Craft precise roadmaps to modernise legacy systems and identify the best automation opportunities.',
         highlights: [
-          'Legacy system modernisation and Strangler Fig architecture roadmaps',
+          'Legacy modernisation roadmaps using the augment first ladder',
           'High-value process identification for AI automation',
-          'Cloud-native vs. Edge/On-Premise cost-benefit analysis',
+          'Cloud-native versus Edge and on-premise cost-benefit analysis',
         ],
       },
       {
@@ -392,10 +652,50 @@ export const solutions: Solution[] = [
         pitch:
           'Align business goals with rapid prototyping and scalable, future-proof IT blueprints.',
         highlights: [
-          'Rapid Proof of Concept (PoC) ideation and prototyping',
+          'Rapid Proof of Concept ideation and prototyping',
           'Blueprinting scalable, future-proof IT landscapes',
           'Cross-functional alignment workshops for technology adoption',
         ],
+      },
+    ],
+    offerings: [
+      {
+        name: 'AI Readiness Assessment',
+        type: 'Assessment',
+        summary:
+          'A short diagnostic of your data, infrastructure, skills and risk, ending in a costed, sequenced roadmap an SME can actually afford to follow.',
+        deliverables: [
+          'A readiness score across data, skills, infrastructure and risk',
+          'A costed, sequenced roadmap',
+          'The cheap gaps to close first',
+        ],
+        idealFor: 'SME leadership weighing an AI investment',
+        timeframe: '3 to 4 weeks',
+      },
+      {
+        name: 'Modernisation Roadmap',
+        type: 'Workshop',
+        summary:
+          'A phased, self-funding plan for legacy and ERP modernisation using the augment first ladder, so nothing is a big bang.',
+        deliverables: [
+          'A phased modernisation plan',
+          'A self-funding sequence',
+          'A risk view for each step',
+        ],
+        idealFor: 'An SME modernising at its own pace',
+      },
+      {
+        name: 'Innovation Workshop',
+        type: 'Workshop',
+        summary:
+          'A working session that turns a vague ambition into a prioritised, costed shortlist of things to try first.',
+        deliverables: [
+          'A prioritised opportunity backlog',
+          'A costed shortlist of first moves',
+          'A clear owner and next step for each',
+        ],
+        idealFor: 'An SME that knows it should do something but not what first',
+        timeframe: '1 to 2 days',
       },
     ],
   },

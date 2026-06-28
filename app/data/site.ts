@@ -5,7 +5,7 @@ export const company = {
   domain: 'zettamine.com',
   tagline: 'The Innovation-Driven Enterprise',
   promise:
-    'Next-generation boutique solutions and SaaS — engineered for high-performance sectors where generic services fall short.',
+    'Next-generation boutique solutions and SaaS, engineered for high-performance sectors where generic services fall short.',
   email: 'hello@zettamine.com',
   careers: 'careers@zettamine.com',
   phone: '+91 (0) 40 4000 0000',
@@ -19,19 +19,37 @@ export const company = {
   ],
 }
 
-// Primary navigation. Solutions render as a mega-menu built from `solutions`.
-export const primaryNav = [
+// Company group, surfaced as a dropdown in the header and a column in the footer.
+export const companyNav = [
+  { label: 'About', to: '/about', icon: 'lucide:building-2', desc: 'Who we are' },
+  { label: 'Our Story', to: '/story', icon: 'lucide:book-open', desc: 'How we began' },
+  { label: 'Our Approach', to: '/approach', icon: 'lucide:compass', desc: 'How we work' },
+  { label: 'Team', to: '/team', icon: 'lucide:users', desc: 'Leaders, advisors and mentors' },
+  { label: 'Partners', to: '/partners', icon: 'lucide:handshake', desc: 'Our ecosystem' },
+  { label: 'Life at ZettaMine', to: '/life', icon: 'lucide:party-popper', desc: 'Culture and events' },
+]
+
+// Primary navigation. Solutions renders as a mega-menu built from `solutions`;
+// Company renders as a dropdown built from `companyNav`.
+export interface NavItem {
+  label: string
+  to: string
+  mega?: boolean
+  group?: boolean
+}
+
+export const primaryNav: NavItem[] = [
   { label: 'Solutions', to: '/solutions', mega: true },
-  { label: 'Approach', to: '/approach' },
+  { label: 'Academy', to: '/academy' },
+  { label: 'Insights', to: '/insights' },
   { label: 'Labs', to: '/labs' },
-  { label: 'About', to: '/about' },
-  { label: 'Story', to: '/story' },
+  { label: 'Company', to: '/about', group: true },
 ]
 
 export const stats = [
   { value: 6, suffix: '', label: 'Deep-tech practices', sub: 'Not a generalist shop' },
   { value: allTopicCount, suffix: '', label: 'Specialised capabilities', sub: 'Across the six pillars' },
-  { value: 2028, suffix: '', label: 'SAP deadline, defied', sub: 'Decoupling over migration', plain: true },
+  { value: 2028, suffix: '', label: 'No forced SAP migration', sub: 'Augment over migrate', plain: true },
   { value: 100, suffix: '%', label: 'Innovation-first delivery', sub: 'No run-of-the-mill work' },
 ]
 
@@ -45,21 +63,21 @@ export const differentiators = [
   {
     icon: 'lucide:flask-conical',
     title: 'Lab-grade R&D',
-    body: 'Our Frontier Tech Labs continuously turn emerging research — agents, BCI, quantum-inspired — into production-grade capability.',
+    body: 'Our Frontier Tech Labs continuously turn emerging research such as agents, BCI and quantum-inspired methods into production-grade capability.',
   },
   {
     icon: 'lucide:scale',
-    title: 'Cost-defiant architecture',
-    body: 'Cognitive decoupling and edge-first design free you from forced migrations and runaway licensing — agility without the overhaul.',
+    title: 'Coexistence by design',
+    body: 'We help you get more from the core systems you already run, adding agility and a lower cost of ownership without a forced overhaul.',
   },
   {
     icon: 'lucide:shield-check',
     title: 'Ground-truth obsessed',
-    body: 'From annotation to deployment, we build on verified, pixel-perfect data and measurable outcomes — never on hand-waving.',
+    body: 'From annotation to deployment, we build on verified, pixel-perfect data and measurable outcomes, never on hand-waving.',
   },
 ]
 
-// "How we work" — a repeatable, low-risk delivery rhythm.
+// "How we work" is a repeatable, low-risk delivery rhythm.
 export const approachSteps = [
   {
     no: '01',
@@ -71,25 +89,25 @@ export const approachSteps = [
     no: '02',
     icon: 'lucide:flask-conical',
     title: 'Prototype',
-    body: 'Frontier Tech Labs builds a production-shaped proof of concept in weeks — real data, real constraints, measurable signal.',
+    body: 'Frontier Tech Labs builds a production-shaped proof of concept in weeks, using real data, real constraints and measurable signal.',
   },
   {
     no: '03',
     icon: 'lucide:layers',
-    title: 'Decouple & build',
-    body: 'We extract value as standalone, edge-first services that wrap — never disrupt — your protected core systems.',
+    title: 'Build alongside',
+    body: 'We add value as standalone, edge-first services that wrap around your protected core systems and never disrupt them.',
   },
   {
     no: '04',
     icon: 'lucide:infinity',
     title: 'Scale & enable',
-    body: 'We harden, instrument and hand over — upskilling your teams so the capability compounds long after we leave.',
+    body: 'We harden, instrument and hand over, upskilling your teams so the capability compounds long after we leave.',
   },
 ]
 
 export const values = [
   { icon: 'lucide:lightbulb', title: 'Innovation as default', body: 'If it already exists off the shelf, it is not our problem to solve. We pursue the frontier.' },
-  { icon: 'lucide:target', title: 'Outcomes over output', body: 'We measure ourselves in business value delivered — not hours billed or slides produced.' },
+  { icon: 'lucide:target', title: 'Outcomes over output', body: 'We measure ourselves in business value delivered, not in hours billed or slides produced.' },
   { icon: 'lucide:users', title: 'Boutique by design', body: 'Small, senior, deeply embedded teams. You work with the people who actually build.' },
   { icon: 'lucide:recycle', title: 'Leave teams stronger', body: 'Every engagement transfers capability. We succeed when you no longer need us.' },
   { icon: 'lucide:lock', title: 'Trust & rigour', body: 'Security, compliance and verified ground truth are foundations, not afterthoughts.' },
@@ -100,17 +118,17 @@ export const story = [
   {
     year: '2024',
     title: 'A different kind of firm',
-    body: 'ZettaMine is founded on a contrarian bet: that the most valuable technology work is the work most firms avoid — niche, frontier and deeply innovative.',
+    body: 'ZettaMine is founded on a contrarian bet, that the most valuable technology work is the work most firms avoid, the niche, frontier and deeply innovative.',
   },
   {
     year: '2024',
     title: 'Frontier Tech Labs opens',
-    body: 'Our innovation incubator begins turning emerging research — autonomous agents, digital twins, quantum-inspired optimisation — into deployable capability.',
+    body: 'Our innovation incubator begins turning emerging research such as autonomous agents, digital twins and quantum-inspired optimisation into deployable capability.',
   },
   {
     year: '2025',
-    title: 'Cognitive Decoupling thesis',
-    body: 'We formalise a radical alternative to forced S/4HANA migration, helping SMEs shrink their SAP footprint and defy the 2028 deadline on their own terms.',
+    title: 'The coexistence thesis',
+    body: 'We formalise a pragmatic alternative to forced S/4HANA migration, helping SMEs get more value from SAP and modernise at their own pace, decoupling only where it pays.',
   },
   {
     year: '2025',
@@ -120,7 +138,7 @@ export const story = [
   {
     year: 'Today',
     title: 'Six pillars, one philosophy',
-    body: 'Industrial AI, ERP decoupling, frontier R&D, data services, upskilling and advisory — each a deep practice, all sharing a single innovation-first DNA.',
+    body: 'Industrial AI, cognitive ERP, frontier R&D, data services, upskilling and advisory. Each is a deep practice, and all share a single innovation-first DNA.',
   },
 ]
 
@@ -140,10 +158,13 @@ export const footerNav = [
   },
   {
     title: 'Company',
+    links: companyNav.map((c) => ({ label: c.label, to: c.to })),
+  },
+  {
+    title: 'Explore',
     links: [
-      { label: 'About', to: '/about' },
-      { label: 'Our Story', to: '/story' },
-      { label: 'Our Approach', to: '/approach' },
+      { label: 'Academy', to: '/academy' },
+      { label: 'Insights', to: '/insights' },
       { label: 'Frontier Tech Labs', to: '/labs' },
       { label: 'Contact', to: '/contact' },
     ],

@@ -17,7 +17,7 @@ function validate() {
 }
 
 const mailtoHref = computed(() => {
-  const subject = encodeURIComponent(`Project enquiry${form.interest ? ` — ${form.interest}` : ''}`)
+  const subject = encodeURIComponent(`Project enquiry${form.interest ? `: ${form.interest}` : ''}`)
   const body = encodeURIComponent(
     `Name: ${form.name}\nCompany: ${form.company}\nArea of interest: ${form.interest}\n\n${form.message}`,
   )

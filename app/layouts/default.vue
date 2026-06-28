@@ -7,5 +7,6 @@
     </main>
     <AppFooter />
     <BackToTop />
+    <CookieConsent />
   </div>
 </template>

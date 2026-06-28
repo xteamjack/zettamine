@@ -2,6 +2,7 @@
 import { company, footerNav } from '~/data/site'
 const year = 2026
 const crm = useCrm()
+const { reopen } = useCookieConsent()
 </script>
 
 <template>
@@ -38,11 +39,11 @@ const crm = useCrm()
       </div>
 
       <!-- link columns -->
-      <div class="grid gap-10 border-t border-hairline py-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-10 border-t border-hairline py-12 sm:grid-cols-2 lg:grid-cols-5">
         <div class="space-y-3">
           <p class="eyebrow text-ember-600 dark:text-saffron-400">{{ company.domain }}</p>
           <p class="text-sm leading-relaxed text-ink-500 dark:text-ink-400">
-            Boutique, innovation-first engineering for Industrial AI, ERP decoupling, frontier R&D,
+            Boutique, innovation-first engineering for Industrial AI, cognitive ERP, frontier R&D,
             data services, upskilling and advisory.
           </p>
           <ul class="space-y-1.5 pt-1 text-sm text-ink-500 dark:text-ink-400">
@@ -78,10 +79,19 @@ const crm = useCrm()
       <!-- bottom bar -->
       <div class="flex flex-col gap-3 border-t border-hairline py-7 text-sm text-ink-500 dark:text-ink-400 sm:flex-row sm:items-center sm:justify-between">
         <p>© {{ year }} {{ company.name }}. Crafted for the innovation-driven enterprise.</p>
-        <p class="flex items-center gap-1.5">
-          <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-          Frontier Tech Labs · always experimenting
-        </p>
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <button
+            type="button"
+            class="transition-colors hover:text-ember-600 dark:hover:text-saffron-300"
+            @click="reopen"
+          >
+            Cookie settings
+          </button>
+          <p class="flex items-center gap-1.5">
+            <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+            Frontier Tech Labs · always experimenting
+          </p>
+        </div>
       </div>
     </div>
   </footer>

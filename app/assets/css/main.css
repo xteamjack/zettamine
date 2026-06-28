@@ -183,11 +183,22 @@
     font-weight: 500;
   }
 
-  /* Glassmorphism surface that adapts to theme */
+  /* Glassmorphism surface that adapts to theme. Kept fairly opaque so header
+     and panel text never mixes with the page behind it. */
   .glass {
-    background: color-mix(in srgb, var(--bg-elevated) 72%, transparent);
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    background: color-mix(in srgb, var(--bg-elevated) 90%, transparent);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+  }
+
+  /* Near-opaque variant for floating menus (mega menu, dropdown, drawer) that
+     sit over arbitrary page content. Falls back to a solid surface when
+     backdrop-filter is unsupported. */
+  .glass-strong {
+    background: var(--bg-elevated);
+    background: color-mix(in srgb, var(--bg-elevated) 98%, transparent);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
   }
 
   .border-hairline { border-color: var(--hairline); }

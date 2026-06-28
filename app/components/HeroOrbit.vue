@@ -17,7 +17,7 @@ const nodes = solutions.map((s, i) => {
 </script>
 
 <template>
-  <div class="relative mx-auto aspect-square w-full max-w-[34rem]">
+  <div class="relative mx-auto aspect-square w-full max-w-[18rem] sm:max-w-[26rem] lg:max-w-[34rem]">
     <!-- rotating rings -->
     <div class="absolute inset-[6%] rounded-full border border-dashed border-saffron-500/25 animate-spin-slow" />
     <div class="absolute inset-[20%] rounded-full border border-ember-500/20 [animation-direction:reverse] animate-spin-slow" />

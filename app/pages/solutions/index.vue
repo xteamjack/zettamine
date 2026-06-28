@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { solutions, allTopicCount } from '~/data/solutions'
 
-useHead({ title: 'Solutions — ZettaMine' })
+useHead({ title: 'Solutions · ZettaMine' })
 </script>
 
 <template>
@@ -9,7 +9,7 @@ useHead({ title: 'Solutions — ZettaMine' })
     <PageHero
       eyebrow="Solutions"
       title="Six deep practices for the digital frontier."
-      :intro="`From the factory floor to frontier R&D — ${allTopicCount} specialised capabilities across six pillars, each engineered for high-value, defensible outcomes.`"
+      :intro="`From the factory floor to frontier R&D, ${allTopicCount} specialised capabilities across six pillars, each engineered for high-value, defensible outcomes.`"
     >
       <template #actions>
         <AppButton to="/contact" size="lg" icon-right="lucide:arrow-up-right">Start a project</AppButton>

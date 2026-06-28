@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { approachSteps, differentiators } from '~/data/site'
-useHead({ title: 'Our Approach — ZettaMine' })
+useHead({ title: 'Our Approach · ZettaMine' })
 </script>
 
 <template>
@@ -8,7 +8,7 @@ useHead({ title: 'Our Approach — ZettaMine' })
     <PageHero
       eyebrow="Approach"
       title="Innovation, de-risked."
-      intro="Frontier technology is only valuable if it ships. Our delivery rhythm turns ambitious ideas into production capability — outcome first, prototype fast, decouple cleanly, enable always."
+      intro="Frontier technology is only valuable if it ships. Our delivery rhythm turns ambitious ideas into production capability. We frame the outcome first, prototype fast, build alongside your core, and enable always."
     >
       <template #actions>
         <AppButton to="/contact" size="lg" icon-right="lucide:arrow-up-right">Start a project</AppButton>
@@ -26,7 +26,7 @@ useHead({ title: 'Our Approach — ZettaMine' })
           class="group grid items-center gap-6 rounded-3xl border border-hairline bg-surface/60 p-6 transition-colors hover:border-ember-500/30 sm:p-8 lg:grid-cols-[auto_1fr_auto]"
         >
           <div class="flex items-center gap-5">
-            <span class="font-display text-5xl font-bold text-ink-200/70 dark:text-ink-700">{{ step.no }}</span>
+            <span class="font-display text-5xl font-bold text-ink-400 dark:text-ink-700">{{ step.no }}</span>
             <IconBadge :icon="step.icon" size="lg" />
           </div>
           <div>
@@ -65,7 +65,7 @@ useHead({ title: 'Our Approach — ZettaMine' })
 
     <CtaBand
       title="Bring us the problem everyone calls impossible."
-      subtitle="A focused discovery is the fastest way to find out what's actually achievable — and what it's worth."
+      subtitle="A focused discovery is the fastest way to find out what's actually achievable, and what it's worth."
     />
     <div class="h-20" />
   </div>

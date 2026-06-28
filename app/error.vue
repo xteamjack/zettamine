@@ -2,7 +2,7 @@
 import type { NuxtError } from '#app'
 const props = defineProps<{ error: NuxtError }>()
 const is404 = computed(() => props.error?.statusCode === 404)
-useHead({ title: is404.value ? 'Page not found — ZettaMine' : 'Something went wrong — ZettaMine' })
+useHead({ title: is404.value ? 'Page not found · ZettaMine' : 'Something went wrong · ZettaMine' })
 </script>
 
 <template>
@@ -18,7 +18,7 @@ useHead({ title: is404.value ? 'Page not found — ZettaMine' : 'Something went 
       </h1>
       <p class="mx-auto mt-3 max-w-sm text-ink-600 dark:text-ink-300">
         {{ is404
-          ? "The page you're looking for doesn't exist — but plenty of innovation does."
+          ? "The page you're looking for doesn't exist, but plenty of innovation does."
           : 'An unexpected error occurred. Try again, or head back to safe ground.' }}
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">

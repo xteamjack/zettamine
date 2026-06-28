@@ -12,7 +12,7 @@ if (!solution.value) {
 const others = computed(() => solutions.filter((s) => s.slug !== slug.value))
 
 useHead(() => ({
-  title: `${solution.value?.menuTitle} — ZettaMine`,
+  title: `${solution.value?.menuTitle} · ZettaMine`,
   meta: [{ name: 'description', content: solution.value?.pitch }],
 }))
 </script>
@@ -57,7 +57,7 @@ useHead(() => ({
           v-reveal="{ delay: i * 80 }"
           class="relative overflow-hidden rounded-2xl border border-hairline bg-surface/60 p-6"
         >
-          <div class="absolute right-4 top-4 font-display text-3xl font-bold text-ink-200/70 dark:text-ink-700">0{{ i + 1 }}</div>
+          <div class="absolute right-4 top-4 font-display text-3xl font-bold text-ink-300 dark:text-ink-700">0{{ i + 1 }}</div>
           <Icon name="lucide:target" class="h-6 w-6 text-ember-500" />
           <p class="mt-4 font-medium leading-snug text-ink-800 dark:text-ink-100">{{ o }}</p>
         </div>
@@ -67,12 +67,25 @@ useHead(() => ({
     <!-- capabilities -->
     <section class="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
       <SectionHeading eyebrow="Capabilities" :title="`Inside ${solution.menuTitle}`">
-        Each capability is a focused, production-grade practice — deployed standalone or composed
+        Each capability is a focused, production-grade practice, deployed standalone or composed
         into an end-to-end solution.
       </SectionHeading>
       <div class="mt-12 grid gap-5 lg:grid-cols-2">
         <div v-for="(t, i) in solution.topics" :id="t.slug" :key="t.slug" v-reveal="{ delay: (i % 2) * 90 }" class="scroll-mt-28">
           <TopicCard :topic="t" :gradient="solution.gradient" />
+        </div>
+      </div>
+    </section>
+
+    <!-- offerings -->
+    <section v-if="solution.offerings?.length" class="mx-auto max-w-7xl px-5 pb-8 pt-12 sm:px-8">
+      <SectionHeading eyebrow="Offerings" :title="`Ways to start with ${solution.menuTitle}`">
+        Packaged, practical engagements you can point at and begin, each scoped for a smaller team
+        and a tighter budget.
+      </SectionHeading>
+      <div class="mt-12 grid gap-5 lg:grid-cols-2">
+        <div v-for="(o, i) in solution.offerings" :key="o.name" v-reveal="{ delay: (i % 2) * 90 }">
+          <OfferingCard :offering="o" />
         </div>
       </div>
     </section>

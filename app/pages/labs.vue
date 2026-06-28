@@ -2,12 +2,12 @@
 import { solutionBySlug } from '~/data/solutions'
 
 const labs = solutionBySlug('frontier-tech-labs')!
-useHead({ title: 'Frontier Tech Labs — ZettaMine' })
+useHead({ title: 'Frontier Tech Labs · ZettaMine' })
 
 const principles = [
   { icon: 'lucide:rocket', title: 'Research to runtime', body: 'We only explore what we can eventually ship. Every experiment is shaped like production.' },
   { icon: 'lucide:shield-check', title: 'De-risk first', body: 'We absorb the uncertainty of the frontier so your enterprise deploys with confidence.' },
-  { icon: 'lucide:git-branch', title: 'Compose, don\'t rebuild', body: 'Lab breakthroughs plug into our other practices — agents, twins and data pipelines combine.' },
+  { icon: 'lucide:git-branch', title: 'Compose, don\'t rebuild', body: 'Lab breakthroughs plug into our other practices, so agents, twins and data pipelines combine.' },
 ]
 </script>
 
@@ -31,7 +31,7 @@ const principles = [
           </h1>
           <p v-reveal="{ delay: 120 }" class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200 sm:text-xl">
             Our innovation incubator experiments with frontier technologies to build the foundational
-            solutions of tomorrow — turning science fiction into tangible business value.
+            solutions of tomorrow, turning science fiction into tangible business value.
           </p>
           <div v-reveal="{ delay: 180 }" class="mt-9 flex flex-wrap gap-3">
             <AppButton to="/contact" size="lg" icon-right="lucide:arrow-up-right">Co-build with the Labs</AppButton>

@@ -20,6 +20,11 @@ const pagesRoutes = [
   '/approach',
   '/labs',
   '/contact',
+  '/academy',
+  '/insights',
+  '/partners',
+  '/team',
+  '/life',
   '/privacy',
   '/terms',
   '/cookies',
@@ -81,17 +86,17 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'ZettaMine — Next-Generation Boutique Technology & SaaS',
+      title: 'ZettaMine · Next-Generation Boutique Technology & SaaS',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'ZettaMine is an innovation-driven boutique technology and SaaS company specialising in Industrial AI, cognitive ERP decoupling, frontier-tech R&D, high-fidelity data services, enterprise upskilling and strategic advisory.',
+            'ZettaMine is an innovation-driven boutique technology and SaaS company specialising in Industrial AI, cognitive ERP augmentation, frontier-tech R&D, high-fidelity data services, enterprise upskilling and strategic advisory.',
         },
         { name: 'theme-color', content: '#FB3B22' },
-        { property: 'og:title', content: 'ZettaMine — The Innovation-Driven Enterprise' },
+        { property: 'og:title', content: 'ZettaMine · The Innovation-Driven Enterprise' },
         {
           property: 'og:description',
           content:

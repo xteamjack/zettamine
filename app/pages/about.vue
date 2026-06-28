@@ -2,14 +2,14 @@
 import { values, stats, differentiators, company } from '~/data/site'
 import { solutions, allTopicCount } from '~/data/solutions'
 
-useHead({ title: 'About — ZettaMine' })
+useHead({ title: 'About · ZettaMine' })
 </script>
 
 <template>
   <div>
     <PageHero
       eyebrow="About"
-      title="An innovation house — not a body shop."
+      title="An innovation house, not a body shop."
       intro="ZettaMine is an innovation-driven enterprise. We deliver next-generation solutions that drive tangible business value in high-performance sectors. Generic, run-of-the-mill services are not our focus; instead, we specialise in niche, high-value and deeply innovative technology areas."
     >
       <template #actions>
@@ -30,18 +30,18 @@ useHead({ title: 'About — ZettaMine' })
               deliberate: the most durable business value lives in the work most firms avoid.
             </p>
             <p>
-              From the factory floor to frontier R&amp;D, our six practices share a single DNA —
-              innovation first, outcomes always, and capability that compounds long after we leave.
+              From the factory floor to frontier R&amp;D, our six practices share a single DNA.
+              Innovation first, outcomes always, and capability that compounds long after we leave.
             </p>
           </div>
         </div>
 
-        <div v-reveal="{ delay: 100 }" class="grid grid-cols-2 gap-4 self-start">
+        <div v-reveal="{ delay: 100 }" class="grid grid-cols-2 gap-3 self-start sm:gap-4">
           <div
             v-for="(s, i) in stats"
             :key="s.label"
             class="rounded-2xl border border-hairline bg-surface/60 p-6"
-            :class="i % 2 === 1 ? 'translate-y-5' : ''"
+            :class="i % 2 === 1 ? 'sm:translate-y-5' : ''"
           >
             <p class="font-display text-3xl font-bold text-gradient">
               <StatCounter :value="s.value" :suffix="s.suffix" :plain="s.plain" />
@@ -99,7 +99,7 @@ useHead({ title: 'About — ZettaMine' })
 
     <CtaBand
       title="Work with a team that builds the future."
-      :subtitle="`Reach us directly at ${company.email} — or start a conversation about what you're trying to make real.`"
+      :subtitle="`Reach us directly at ${company.email}, or start a conversation about what you're trying to make real.`"
     />
     <div class="h-20" />
   </div>

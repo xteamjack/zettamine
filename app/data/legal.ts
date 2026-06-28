@@ -82,7 +82,7 @@ export const legalDocs: Record<string, LegalDoc> = {
       {
         heading: 'Intellectual property',
         body: [
-          'All content on this site — including text, graphics, logos and code — is owned by ZettaMine or its licensors and is protected by applicable intellectual property laws. The ZettaMine name and mark may not be used without written permission.',
+          'All content on this site, including text, graphics, logos and code, is owned by ZettaMine or its licensors and is protected by applicable intellectual property laws. The ZettaMine name and mark may not be used without written permission.',
         ],
       },
       {
@@ -118,7 +118,7 @@ export const legalDocs: Record<string, LegalDoc> = {
         heading: 'What cookies we use',
         list: [
           'Essential cookies required for the site to function and to remember your theme preference.',
-          'Optional, aggregated analytics to understand which content is useful — these never identify you personally.',
+          'Optional, aggregated analytics to understand which content is useful. These never identify you personally.',
         ],
       },
       {
@@ -142,14 +142,14 @@ export const legalDocs: Record<string, LegalDoc> = {
     eyebrow: 'Our commitment',
     updated,
     intro:
-      'AI is central to what we build. We hold ourselves to a clear standard for how it is designed, deployed and governed — because trustworthy AI is a prerequisite for real business value.',
+      'AI is central to what we build. We hold ourselves to a clear standard for how it is designed, deployed and governed, because trustworthy AI is a prerequisite for real business value.',
     sections: [
       {
         heading: 'Principles we build by',
         list: [
           'Human oversight: AI augments expert decision-making; it does not replace accountability.',
           'Transparency: we are explicit about model capabilities, limits and failure modes.',
-          'Data integrity: models are only as good as their ground truth — we verify it.',
+          'Data integrity: models are only as good as their ground truth, so we verify it.',
           'Privacy by design: client data is isolated, and never used to train third-party models without consent.',
           'Fairness & safety: we test for bias, misuse and harmful outputs before deployment.',
         ],
@@ -157,7 +157,7 @@ export const legalDocs: Record<string, LegalDoc> = {
       {
         heading: 'Governance',
         body: [
-          'Every AI engagement includes a readiness and risk assessment covering data maturity, infrastructure, compliance and ethical considerations — so deployments are responsible from day one.',
+          'Every AI engagement includes a readiness and risk assessment covering data maturity, infrastructure, compliance and ethical considerations, so deployments are responsible from day one.',
         ],
       },
       {
